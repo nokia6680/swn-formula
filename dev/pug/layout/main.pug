@@ -16,31 +16,34 @@ html(lang="ru-RU")
 		link(rel="stylesheet" type='text/css' href="static/css/styles.css")
 	body.body
 		include ../modules/header/header
-			main.main
-				section.content
-					h1.content__title
-					p.content__description
-					button(type="button").content__btn.js-activate Активировать
-				section.event
-					h2.event__title Пожалуства, укажите Ваш телефон
-					form(method="post" action="#").event__form.form
-						.form__wrapper
+		main.main
+			section.content
+				h1.content__title Статус «GOLD»
+				p.content__description Получите особые цены, а также дополнительные преимущества при достижении следующего уровня программы
+				button(type="button").content__btn.js-activate Активировать
+			section.event
+				h2.event__title Пожалуйста, укажите Ваш телефон
+				form(method="post" action="#").event__form.form
+					.form__wrapper
+						.form__board
 							ul.form__list
 								li.form__item
 									label(for="name").form__label Фамилия и имя:
-									input(type="text" name="name" id="name" placeholder="Фамилия и имя").form__input
+									input(type="text" name="name" id="name" placeholder="Фамилия и имя" required).form__input
 									span.form__sign.correct.active
 								li.form__item
 									label(for="tel").form__label Номер телефона:
-									input(type="tel" name="tel" id="tel" placeholder="+71234567890").form__input
+									input(type="tel" name="tel" id="tel" placeholder="+71234567890" required).form__input
 									span.form__sign.error
-							.form__agree
-								input(type="checkbox" name="policy" id="policy").form__agree-label
-								label(for="policy").form__agree-label Я согласен с&nbsp;
-									a(href="#" target="_blank").form__agree-link обработкой персональных данных
-								span.form__agree-error Необходимо отметить все поля
-							img(src="static/images/content/swp-logo.svg" alt="SimpleWine Prive").form__logo
-						button(type="submit").form__btn.js-submit Отправить
+								li.form__item.logo
+									img(src="static/images/content/swp-logo.svg" alt="SimpleWine Prive").form__logo
+						.form__agree
+							input(type="checkbox" name="policy" id="policy" required).form__agree-input
+							label(for="policy").form__agree-label Я согласен с&nbsp;
+								a(href="#" target="_blank").form__agree-link правилами обработки 
+								| персональных данных
+							span.form__agree-error Необходимо отметить все поля
+					button(type="submit").form__btn.js-submit Отправить
 		include ../modules/footer/footer
 		script(src="static/js/vendor/jquery-3.3.1.min.js")
 		script(src="static/js/main.js")
