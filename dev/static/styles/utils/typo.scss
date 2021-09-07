@@ -1,0 +1,37 @@
+.title {
+    @include font-setting($primary-font, 2rem, normal, 700, $text-black);
+    margin-bottom: 1.5rem;
+}
+
+
+.description {
+    @include font-setting($primary-font, 1.125rem, 1.5, 400, $white);
+}
+
+q {
+    @include font-setting($primary-font, 1rem, normal, 300, $text-black);
+    font-style: italic;
+    margin-bottom: 1.25rem;
+}
+
+pre {
+    font-family: 'monospace', monospace;
+    font-size: 1rem;
+    margin: 0;
+    margin-bottom: 1.25rem;
+}
+
+@media only screen and (min-width: $tablet) {
+    .title {
+        font-size: 2.5rem;
+    }
+
+    .description {
+        font-size: 1.25rem;
+    }
+
+    q {
+        font-size: 1.125rem;
+        margin-bottom: 1.5rem;
+    }
+}
