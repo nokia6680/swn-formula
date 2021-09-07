@@ -4,7 +4,9 @@ header.header
             img(src="static/images/content/swp-logo.svg" alt="Simple Wine Prive").header__logo-item.--swp
             img(src="static/images/content/rg-logo.svg" alt="Росгонки").header__logo-item.--rg
             img(src="static/images/content/f1-logo.svg" alt="Formula 1").header__logo-item.--f1
-        img(src="static/images/content/car-image.png" alt="Болид формулы-1").header__car
+        picture.header__frame
+            source(srcset="static/images/content/car-image.webp" type="image/webp")
+            img(src="static/images/content/car-image.png" alt="Болид формулы-1").header__car
         
         .header__info
             p.header__description 23-26 сентября в Сочи

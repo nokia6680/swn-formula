@@ -82,5 +82,9 @@ button { outline: none; }
     display: none;
 }
 
+.main {
+    z-index: 0;
+}
+
 //Модули
 @import "modules/modules";

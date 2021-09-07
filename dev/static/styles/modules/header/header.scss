@@ -1,0 +1,13 @@
+.header {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+
+    background-color: $white;
+
+    @include flex-setting(column, flex-start, center);
+
+    z-index: 2;
+}
