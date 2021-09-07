@@ -9,6 +9,46 @@
 
     @include flex-setting(column, flex-start, center);
 
+    &.passed {
+        padding-top: 2.5rem;
+        transition: 0.3s ease-in;
+
+        .content__title {
+            transform: translateY(-20px);
+            opacity: 0;
+
+            transition: opacity 0.3s ease-in, transform 0.3s ease-in;
+            pointer-events: none;
+
+            &.invisible {
+                display: none;
+            }
+        }
+
+        .content__description {
+            transform: translateY(-40px);
+            opacity: 0;
+
+            transition: opacity 0.3s ease-in 0.2s, transform 0.3s ease-in 0.2s;
+            pointer-events: none;
+
+            &.invisible {
+                display: none;
+            }
+        }
+
+        .content__btn {
+            opacity: 0;
+            pointer-events: none;
+            transition: all 0.3s ease-in;
+        }
+    }
+
+    &.passed.invisible {
+        padding: 0;
+        max-height: 0;
+    }
+
     &__title {
         @include font-setting($primary-font, 1.75rem, 2.25rem, 500, $white);
         margin-bottom: 1.875rem;
@@ -17,6 +57,8 @@
     &__description {
         @include font-setting($primary-font, 1rem, 1.25rem, 400, $white);
         text-align: center;
+
+        margin-bottom: 2rem;
     }
 
     &__btn {
@@ -28,9 +70,6 @@
         box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.25);
         transition: 0.3s ease-in;
         outline: none;
-
-        margin-top: auto;
-        margin-bottom: 0;
 
         &:hover,
         &:active {

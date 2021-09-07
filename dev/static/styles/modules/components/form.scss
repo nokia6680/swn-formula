@@ -1,6 +1,5 @@
 .form {
     width: 100%;
-    height: 100%;
     @include flex-setting(column, flex-start, center);
 
     &__wrapper {
@@ -104,6 +103,7 @@
         @include flex-setting(row, flex-start, flex-start);
 
         position: relative;
+        margin-bottom: 1.25rem;
 
         &-label {
             @include font-setting($primary-font, 1rem, 1.222, 400, $white);
