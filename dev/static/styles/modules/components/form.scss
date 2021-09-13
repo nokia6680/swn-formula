@@ -91,6 +91,7 @@
 
         @include font-setting($primary-font, 1.25rem, 1.5625rem, 400, $gray);
         letter-spacing: -0.03px;
+        -webkit-appearance: none
     }
 
     &__logo {

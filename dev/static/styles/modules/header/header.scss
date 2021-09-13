@@ -1,17 +1,21 @@
 .header {
     width: 100%;
-    height: 100%;
+    min-height: 100%;
+    height: calc(var(--vh, 1vh) * 100);
     position: absolute;
     top: 0;
     bottom: 0;
-
+    transition: height 0.4s ease-in;
     @include flex-setting(column, flex-start, center);
 
     z-index: 2;
 
     &.passed {
-        height: 40%;
+        min-height: 40vh;
+        height: -webkit-fill-available;
+        height: calc(var(--vh, 1vh) * 40);
         transition: all 0.4s ease-in;
+        overflow: hidden;
 
         .header__logo-item.--swp {
             max-height: 50px;
