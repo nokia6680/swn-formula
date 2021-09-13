@@ -93,3 +93,25 @@
         opacity: 0;
     }
 }
+
+@media only screen and (orientation: landscape) {
+    .footer {
+        &__wrapper {
+            align-items: flex-end;
+            padding-right: 5rem;
+        }
+
+        &__frame {
+            width: 70%;
+
+            &-image {
+                width: 60%;
+            }
+        }
+
+        &__logo {
+            max-height: 80px;
+            align-self: flex-end;
+        }
+    }
+}

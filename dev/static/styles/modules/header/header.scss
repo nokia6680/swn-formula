@@ -123,3 +123,52 @@
         }
     }
 }
+
+@media only screen and (orientation: landscape) {
+    .header {
+        &.passed {
+            min-height: 40vh;
+            height: calc(var(--vh, 1vh) * 40);
+
+            .header__logo {
+                padding-right: 4.375rem;
+                display: grid;
+                grid-template-areas:
+                    'rg swp'
+                    'f1 ...'
+                ;
+
+                grid-template-columns: 100px 1fr;
+                grid-column-gap: 1rem;
+            }
+
+            .header__logo-item.--swp {
+                grid-area: swp;
+                max-height: 70px;
+                height: 70px;
+                margin-bottom: 0;
+                justify-self: center;
+            }
+
+            .header__logo-item.--rg {
+                grid-area: rg;
+                max-height: 35px;
+                margin-bottom: 1rem;
+            }
+
+            .header__logo-item.--f1 {
+                grid-area: f1;
+                max-height: 16px;
+            }
+
+            .header__frame {
+                grid-area: frame;
+                width: 25%;
+            }
+        }
+
+        &__frame {
+            max-width: 375px;
+        }
+    }
+}

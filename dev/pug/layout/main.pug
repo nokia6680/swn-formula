@@ -19,8 +19,10 @@ html(lang="ru-RU")
 		main.main
 			section.content
 				h1.content__title Статус «GOLD»
-				p.content__description Получите особые цены, а также дополнительные преимущества при достижении следующего уровня программы
+				p.content__description Финишируй первым и получи приз! 
+				p.content__description Оформите ваш заказ до 1 ноября: первым 100 клиентам мы подарим набор легендарных бокалов Spiegelau. 
 				button(type="button").content__btn.js-activate Активировать
+				span.content__note Предложение действует только для частных клиентов SimpleWine Privé при заказе на сумму от 50 000 рублей при оформлении первого заказа в SimpleWine Privé до 1 ноября.
 			section.event
 				h2.event__title Пожалуйста, укажите Ваш телефон
 				form(method="post" action="#").event__form.form
@@ -30,11 +32,11 @@ html(lang="ru-RU")
 								li.form__item
 									label(for="name").form__label Фамилия и имя:
 									input(type="text" name="name" id="name" placeholder="Фамилия и имя" required).form__input
-									span.form__sign.correct.active
+									span.form__sign
 								li.form__item
 									label(for="tel").form__label Номер телефона:
 									input(type="tel" name="tel" id="tel" placeholder="+71234567890" required).form__input
-									span.form__sign.error
+									span.form__sign
 								li.form__item.logo
 									img(src="static/images/content/swp-logo.svg" alt="SimpleWine Prive").form__logo
 						.form__agree
