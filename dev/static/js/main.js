@@ -10,7 +10,6 @@ window.addEventListener('resize', () => {
   document.documentElement.style.setProperty('--vh', `${vh}px`);
 });
 
-var firstStep = document.querySelector('.js-start');
 var firstPage = document.querySelector('.header');
 var secondPage = document.querySelector('.content');
 var secondStep = document.querySelector('.js-activate');
@@ -18,9 +17,11 @@ var submitBtn = document.querySelector('.js-submit');
 var thirdPage = document.querySelector('.event');
 var lastPage = document.querySelector('.footer');
 
-firstStep.addEventListener('click', function() {
-    firstPage.classList.add('passed');
-});
+if (firstPage) {
+    setTimeout(function() {
+        return firstPage.classList.add('passed');
+    }, 800);
+}
 
 if (secondStep) {
     secondStep.addEventListener('click', function() {
